@@ -1,0 +1,20 @@
+{
+  "name": "fitness_2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "aws s3 cp build s3://fitness-hosting-mobilehub-162871162 --recursive",
+    "cloudfront-invalidate": "aws cloudfront create-invalidation --distribution-id E3942W91IMO44C --paths /\\*",
+    "cloudfront-list": "aws cloudfront list-distributions | grep E3942W91IMO44C",
+    "cloudfront-list-invalidations": "aws cloudfront list-invalidations --distribution-id E3942W91IMO44C",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
