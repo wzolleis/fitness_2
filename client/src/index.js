@@ -19,7 +19,7 @@ import {handleSignOut} from './Auth/auth';
 import awsmobile from './configuration/aws-exports';
 import './css/general.css';
 
-require('file-loader?name=[name].[ext]./index.html');
+//require('file-loader?name=[name].[ext]./index.html');
 
 const PublicRoute = ({component: Component, authStatus, ...rest}) => (
     <Route {...rest} render={props => authStatus == false
